@@ -1,0 +1,10 @@
+.root {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 40px;
+	background: red;
+	max-width: 1440px;
+	margin: 0 auto;
+	text-align: center;
+}

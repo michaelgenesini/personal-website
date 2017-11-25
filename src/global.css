@@ -1,0 +1,136 @@
+
+
+@font-face {
+	font-family: "Lato Black";
+	src: local(Lato), url('./assets/fonts/Lato-Black.ttf') format("truetype");
+}
+
+html.-no-scroll {
+	overflow: hidden !important;
+}
+
+body {
+	position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato Black', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: #fff;/*#F2F2F2;*/
+	color: #4A4A4A;
+	padding: 40px;
+	min-height: 550px;
+	overflow-x: hidden;
+}
+
+body:after {
+  position: absolute;
+	content: '';
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-image: url('./assets/imgs/noise.jpg');
+	background-size: cover;
+  opacity: .037;
+	pointer-events: none;
+}
+body:before {
+  position: absolute;
+	content: '';
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  top: 10px;
+  left: 10px;
+  box-shadow: inset 0px 0px 0px 10px #4A4A4A;
+	pointer-events: none;
+	z-index: 2;
+}
+
+@media screen and (max-width: 630px) {
+	body:before {
+	  height: 100%;
+	  width: 100%;
+	  top: 0px;
+	  left: 0px;
+	}
+}
+
+* {
+	user-select: none;
+}
+
+a {
+	color: #4A4A4A;
+	text-decoration: none;
+	display: inline-block;
+}
+
+ul {
+	padding: 0;
+  margin: 0;
+}
+ul li {
+	list-style: none;
+	padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	font-size: 11.75rem;
+  margin: 0;
+}
+@media screen and (min-width: 630px) and (max-width: 1440px) {
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 8rem;
+	}
+}
+/*@media screen and (min-width: 630px) and (max-width: 991px) {
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 5rem;
+	}
+}*/
+
+@media screen and (max-width: 630px) {
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 3rem;
+	}
+}
+
+*.-underline {
+	position: relative;
+	display: inline-block;
+}
+
+*.-underline:after {
+	position: absolute;
+	content: '';
+	width: 115%;
+	left: -.1em;
+	bottom: .13em;
+	height: .3em;
+	background-color: #4A4A4A;
+	opacity: .2;
+	pointer-events: none;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+		-webkit-transition: all ease-out .2s;
+		-moz-transition: all ease-out .2s;
+		-o-transition: all ease-out .2s;
+		transition: all ease-out .2s;
+		cursor: pointer;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #4A4A4A;
+		width: 100%;
+		border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  width: 8px;
+}

@@ -1,0 +1,15 @@
+.paragraph {
+	position: relative;
+	font-size: 2.3rem;
+	text-align: left;
+	color: #B6B6B6;
+	display: inline-block;
+	z-index: 1;
+	max-width: 500px;
+}
+
+@media screen and (max-width: 630px) {
+	.paragraph {
+		font-size: 1.5rem;
+	}
+}

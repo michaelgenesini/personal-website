@@ -1,0 +1,72 @@
+.hero {
+	position: relative;;
+	width: 100%;
+	max-width: 1440px;
+	height: calc( 100vh - 100px);
+	min-height: 500px;
+	margin: 0 auto;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.image {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 0;
+	opacity: .4;
+	max-height: 500px;
+	overflow: hidden;
+	z-index: 1;
+	pointer-events: none;
+}
+
+@media screen and (max-width: 630px) {
+	.image {
+    position: relative;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.image {
+    position: relative;
+	}
+}
+
+.image img {
+	max-width: 500px;
+	width: 100%
+}
+
+@media (max-width: 600px) {
+	.image img {
+		margin-top: -50px;
+	}
+}
+
+.links {
+	margin-bottom: 1rem
+}
+.links li {
+	display: inline-block;
+	margin: 0 .5rem;
+}
+.links li:first-child {
+	margin-left: 0
+}
+.links a {
+	font-size: 2rem;
+}
+.links a:hover {
+	color: gray;
+}

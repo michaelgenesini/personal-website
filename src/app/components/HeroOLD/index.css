@@ -1,0 +1,35 @@
+.root {
+	position: relative;;
+	width: 100%;
+	max-width: 1440px;
+	height: calc( 100vh - 110px);
+	min-height: 400px;
+	margin: 0 auto;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 968px;
+	margin: 0 auto;
+}
+
+.image {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 0;
+}
+
+.image img {
+	max-width: 500px;
+	width: 100%
+}
+
+@media (max-width: 600px) {
+	.image img {
+		margin-top: -50px;
+	}
+}

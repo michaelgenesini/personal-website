@@ -1,0 +1,38 @@
+.title {
+	position: relative;
+	font-size: 3rem;
+	text-align: center;
+	z-index: 1;
+}
+
+.title h1 {
+	z-index: 2
+}
+
+.title span {
+	text-align: left;
+	display: block;
+}
+
+@media (max-width: 600px) {
+	.title {
+		font-size: 1.5rem;
+	}
+}
+
+.shadow {
+	position: absolute;
+	top: 0;
+	margin-top: 1.5rem;
+	margin-left: .5rem;
+	color: #DBDBDB;
+	padding-top: 1rem;
+	z-index: -1!important
+}
+
+@media screen and (max-width: 630px) {
+	.shadow {
+		margin-top: .05rem;
+    margin-left: .1rem;
+	}
+}
