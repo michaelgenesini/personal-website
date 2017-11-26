@@ -5,6 +5,7 @@ const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
@@ -36,6 +37,12 @@ module.exports = env => {
         module: {
             rules: [
                 {
+					test: /\.(ttf|woff|otf|png|svg|jpg)$/,
+					use: isProd
+					? 'file-loader?context=src/static/&name=[path][name].[ext]&outputPath=../../public/assets/'
+					: 'file-loader'
+				},
+                {
                     test: /\.js?$/,
                     exclude: /node_modules/,
                     loader: 'babel-loader',
@@ -55,6 +62,7 @@ module.exports = env => {
         },
         plugins: [
             new CleanPlugin(['public/assets', 'public/favicon.ico'], { dist: resolve(__dirname, './public/') }),
+            new CopyPlugin([{ context: 'src/static', from: '**/*.*', to: resolve(__dirname, './public/assets') }]),
             new HtmlPlugin({
                 template: resolve(__dirname, './src/index.html'),
                 minify: {
