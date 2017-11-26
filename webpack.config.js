@@ -6,6 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
@@ -63,6 +64,9 @@ module.exports = env => {
         plugins: [
             new CleanPlugin(['public/assets', 'public/favicon.ico'], { dist: resolve(__dirname, './public/') }),
             new CopyPlugin([{ context: 'src/static', from: '**/*.*', to: resolve(__dirname, './public/assets') }]),
+            new ServiceWorkerWebpackPlugin({
+                entry: resolve(__dirname, 'src/sw.js'),
+            }),
             new HtmlPlugin({
                 template: resolve(__dirname, './src/index.html'),
                 minify: {
