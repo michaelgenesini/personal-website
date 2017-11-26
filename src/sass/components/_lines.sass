@@ -1,0 +1,29 @@
+.lines
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    opacity: .1
+    pointer-events: none
+
+    .lines__line
+        position: relative
+        float: left
+        height: 100%
+        width: calc( 100% / 4 )
+        @media #{$tablet-and-up}
+            width: calc( 100% / 6 )
+        @media #{$desktop-and-up}
+            width: calc( 100% / 8 )
+
+        &:last-child:after
+            display: none
+        &:after
+            content: ""
+            position: absolute
+            height: 100%
+            top: 0
+            right: 0
+            bottom: 0
+            border-right: 1px solid $darkBlack
