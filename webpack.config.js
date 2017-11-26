@@ -18,7 +18,7 @@ module.exports = env => {
         entry: './src/index.js',
         output: {
             path: resolve(__dirname, './public'),
-            filename: isProd ? 'assets/scripts/bundle.[hash:4].js' : 'assets/scripts/bundle.js'
+            filename: isProd ? 'assets/scripts/[name].[hash:4].js' : 'assets/scripts/[name].js'
         },
         resolve: {
             extensions: ['.js', '.json'],
@@ -62,11 +62,15 @@ module.exports = env => {
             ]
         },
         plugins: [
+            new webpack.DefinePlugin({
+                'process.HAS_CREATIVE': JSON.stringify(!isProd)
+            }),
             new CleanPlugin(['public/assets', 'public/favicon.ico'], { dist: resolve(__dirname, './public/') }),
             new CopyPlugin([{ context: 'src/static', from: '**/*.*', to: resolve(__dirname, './public/assets') }]),
             new ServiceWorkerWebpackPlugin({
                 entry: resolve(__dirname, 'src/sw.js'),
             }),
+            new webpack.optimize.CommonsChunkPlugin({name: 'main', async: true}),
             new HtmlPlugin({
                 template: resolve(__dirname, './src/index.html'),
                 minify: {

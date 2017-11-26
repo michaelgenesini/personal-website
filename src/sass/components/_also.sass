@@ -1,0 +1,30 @@
+.also
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    width: 100px
+    background-color: $darkBlack
+    color: $white
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    opacity: 0
+    transform: translateX(100px)
+    transition: translate 1s ease-in, width .2s ease-in-out
+
+    &:hover
+        width: 120px
+
+    &.also--visible
+        opacity: 1
+        transform: translateX(0)
+
+    .also__content
+        transform: rotateZ(90deg)
+        font-size: 2rem
+
+body.body--creative .also .also__content
+    font-family: $familyBodoni
