@@ -29,5 +29,9 @@
     "uglifyjs-webpack-plugin": "^1.1.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.3",
+    "postcss-loader": "^2.0.9"
   }
 }

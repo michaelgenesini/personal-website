@@ -55,9 +55,29 @@ module.exports = env => {
 					test: /\.(sass|scss)$/,
 					exclude: /node_modules/,
 					loader: isProd ?  ExtractTextWebpackPlugin.extract({
-						// fallback: 'style-loader',
-						use: 'css-loader!sass-loader'
-					}) : 'style-loader!css-loader!sass-loader'
+						fallback: 'style-loader',
+                        use: [
+                            {
+                                loader: 'css-loader',
+                            },
+                            {
+                                loader: 'postcss-loader',
+                                options: {
+                                    plugins: (loader) => [
+                                        require('autoprefixer')()
+                                    ],
+                                    // config: {
+                                    //     ctx: {
+                                    //         autoprefixer: {}
+                                    //     }
+                                    // }
+                                }
+                            },
+                            {
+                                loader: 'sass-loader',
+                            }
+                        ]
+                    }) : 'style-loader!css-loader!sass-loader'
 				}
             ]
         },
