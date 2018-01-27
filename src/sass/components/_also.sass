@@ -28,11 +28,19 @@
         font-size: 2rem
 
     @media #{$tablet-and-down}
-        height: 100px
+        height: 50px
+        width: 100%
         top: auto
+        left: 0
+        transform: translateY(50px)
+        &:hover
+            width: 100%
+        &.also--visible
+            opacity: 1
+            transform: translateY(0)
 
         .also__content
-            // transform: rotateZ(90deg)
+            transform: rotateZ(0deg)
             font-size: 1.2rem
 
 body.body--creative
