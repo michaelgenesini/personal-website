@@ -1,6 +1,6 @@
 var serviceWorkerOption = {
   "assets": [
-    "/assets/scripts/main.3660.js",
+    "/assets/scripts/main.87c8.js",
     "/assets/fonts/Bodoni.ttf",
     "/assets/fonts/InputMono-Regular.ttf"
   ]
