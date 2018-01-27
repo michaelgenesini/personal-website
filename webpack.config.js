@@ -83,7 +83,7 @@ module.exports = env => {
         },
         plugins: [
             new webpack.DefinePlugin({
-                'process.HAS_CREATIVE': JSON.stringify(!isProd)
+                'process.HAS_CREATIVE': JSON.stringify(true)
             }),
             new CleanPlugin(['public/assets', 'public/favicon.ico'], { dist: resolve(__dirname, './public/') }),
             new CopyPlugin([{ context: 'src/static', from: '**/*.*', to: resolve(__dirname, './public/assets') }]),
