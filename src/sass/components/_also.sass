@@ -13,10 +13,11 @@
     cursor: pointer
     opacity: 0
     transform: translateX(100px)
-    transition: translate 1s ease-in, width .2s ease-in-out
+    transition: transform 1s cubic-bezier(0, 0.58, 0.08, 1), width .2s cubic-bezier(0, 0.58, 0.08, 1), background-color .1s ease-in-out, color .1s ease-in-out
 
     &:hover
-        width: 120px
+        @media (pointer: fine)
+            width: 120px
 
     &.also--visible
         opacity: 1
@@ -26,5 +27,17 @@
         transform: rotateZ(90deg)
         font-size: 2rem
 
-body.body--creative .also .also__content
-    font-family: $familyBodoni
+    @media #{$tablet-and-down}
+        height: 100px
+        top: auto
+
+        .also__content
+            // transform: rotateZ(90deg)
+            font-size: 1.2rem
+
+body.body--creative
+    .also
+        background-color: $white
+        color: rgba($darkBlack,.85)
+        .also__content
+            font-family: $familyBodoni

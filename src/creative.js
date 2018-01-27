@@ -1,18 +1,31 @@
-console.log('CREATIVE')
+const creative = options => {
+    console.log('__CREATIVE__: ', options.paragraph)
+    const newParagraph = `Creative Developer because I love to code some nerdy art on the web. Currently based in Parma, IT.`
 
-const alsoTpl = `<div class="also">
-    <div class="also__content">Also</div>
-</div>`
+    const alsoTpl = `<div class="also">
+        <div class="also__content">Also</div>
+    </div>`
 
-const body = document.getElementsByTagName('body')[0]
-body.innerHTML += alsoTpl
+    var a = document.createElement('div')
+    a.innerHTML = alsoTpl
 
-setTimeout(() => {
-    const also = document.getElementsByClassName('also')[0]
-    also.classList.add('also--visible')
+    const body = document.getElementsByTagName('body')[0]
+    body.appendChild(a)
 
-    also.addEventListener('click', () => {
-        body.classList.toggle('body--creative')
-    })
+    setTimeout(() => {
+        const also = document.getElementsByClassName('also')[0]
+        also.classList.add('also--visible')
 
-}, 2000)
+        also.addEventListener('click', () => {
+            body.classList.toggle('body--creative')
+            if (body.classList.contains('body--creative')) {
+                options.paragraph.baffle.start().text(text => newParagraph).reveal(1000)
+            } else {
+                options.paragraph.baffle.start().text(text => options.paragraph.text).reveal(1000)
+            }
+        })
+
+    }, 2000)
+}
+
+export default creative

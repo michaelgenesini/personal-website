@@ -1,11 +1,11 @@
 
 
-=fontSize-p($size: 1rem)
-    font-size: 1rem
+=fontSize-p($size: 1rem, $sizeTablet: 1.65rem, $sizeDesktop: 2.75rem)
+    font-size: $size
     @media #{$tablet-and-up}
-        font-size: 1.65rem
+        font-size: $sizeTablet
     @media #{$desktop-and-up}
-        font-size: 2.75rem
+        font-size: $sizeDesktop
 
 =font-face($name, $path, $weight: null, $exts: otf woff2 woff ttf svg) 
 	$src: null
