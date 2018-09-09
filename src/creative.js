@@ -1,6 +1,6 @@
 const creative = options => {
     console.log('__CREATIVE__: ', options.paragraph)
-    const newParagraph = `Creative Developer because I love to code some nerdy art on the web. Currently based in Parma, IT.`
+    const newParagraph = `Creative Developer because I love to code some nerdy art on the web. Currently based in Milan, IT.`
 
     const alsoTpl = `<div class="also">
         <div class="also__content">Also</div>
