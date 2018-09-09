@@ -8,7 +8,7 @@ if ('serviceWorker' in navigator) {
 }
 
 const $paragraph = document.getElementById('paragraph')
-const paragraph = `Frontend Engineer focused on components systems and automated tools. Currently based in Parma, IT.`
+const paragraph = `Frontend Engineer focused on components systems and automated tools. Currently based in Milan, IT.`
 const s = ["█","▓","▒","░","█","▓","▒","░","█","▓","▒","░","/","+","-","•","~","!","=","*"]
 const b = baffle($paragraph, {
     characters: s,
