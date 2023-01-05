@@ -1,38 +1,23 @@
 {
   "name": "personal-website",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:michaelgenesini/personal-website.git",
-  "author": "Michael Genesini <michael.genesini@gmail.com>",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --hot",
-    "build": "webpack --env.production"
-  },
-  "devDependencies": {
-    "babel-core": "6.26.0",
-    "babel-loader": "7.1.2",
-    "babel-preset-env": "1.6.1",
-    "clean-webpack-plugin": "0.1.17",
-    "copy-webpack-plugin": "4.2.3",
-    "css-loader": "0.28.7",
-    "dotenv": "4.0.0",
-    "extract-text-webpack-plugin": "3.0.2",
-    "file-loader": "1.1.5",
-    "html-webpack-plugin": "2.30.1",
-    "node-sass": "4.7.2",
-    "sass-loader": "6.0.6",
-    "script-ext-html-webpack-plugin": "1.8.8",
-    "serviceworker-webpack-plugin": "0.2.3",
-    "style-ext-html-webpack-plugin": "3.4.5",
-    "style-loader": "0.19.0",
-    "uglifyjs-webpack-plugin": "1.1.1",
-    "webpack": "3.8.1",
-    "webpack-dev-server": "2.9.4",
-    "autoprefixer": "7.2.3",
-    "baffle": "0.3.6",
-    "postcss-loader": "2.0.9"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "13.1.1",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.10",
+    "eslint": "8.31.0",
+    "eslint-config-next": "13.1.1",
+    "next": "13.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.4"
   }
 }
