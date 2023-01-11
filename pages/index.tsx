@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Lora } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { Logo } from '../src/components/Logo'
 
 const font = Lora({ subsets: ['latin'] })
 const fontBold = Lora({ weight: "600", subsets: ['latin'] })
@@ -23,15 +24,8 @@ export default function Home() {
       </Head>
       <main>
         <section className={styles.section}>
-        <Link href="/">
-            <Image
-              src="/logo.svg"
-              alt="Mike Logo"
-              className={styles.logo}
-              width={267}
-              height={46}
-              priority
-            />
+          <Link href="/">
+            <Logo />
           </Link>
           <h1 className={font.className}>Michael Genesini</h1>
           <h2 className={font.className}>Engineering Manager</h2>

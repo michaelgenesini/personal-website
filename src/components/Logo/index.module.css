@@ -1,0 +1,9 @@
+.logo svg path {
+  fill: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo svg path {
+    fill: white;
+  }
+}
