@@ -8,6 +8,6 @@
 
 @media (prefers-color-scheme: dark) {
   .logo svg path {
-    fill: rgb(var(--background-rgb));
+    fill: rgb(var(--foreground-rgb));
   }
 }

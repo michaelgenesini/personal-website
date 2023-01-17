@@ -27,11 +27,13 @@ export default function Home() {
 
           <p>I would be incredibly happy if you wanted to contact me and talk about anything. Feel free to reach out to me through any of my main channels 🥰</p>
 
-          <ul>
-            <li><a href="https://linkedin.com/in/michaelgenesini">LinkedIn</a></li>
-            <li><a href="">GitHub</a></li>
-            <li><a href="">Resume</a></li>
-          </ul>
+          <p>
+            <ul>
+              <li><a href="https://linkedin.com/in/michaelgenesini">LinkedIn</a></li>
+              <li><a href="">GitHub</a></li>
+              <li><a href="">Resume</a></li>
+            </ul>
+          </p>
         </section>
       </main>
     </>

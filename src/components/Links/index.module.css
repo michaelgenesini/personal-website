@@ -23,6 +23,10 @@
   bottom: 4px;
 }
 
+.links ul li a {
+  text-decoration: none;
+}
+
 .links ul li a:hover {
   text-decoration: underline;
 }

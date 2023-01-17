@@ -23,7 +23,7 @@ export default function Home() {
         <Header />
 
         <section className={[styles.section, font.className].join(' ')}>
-          <h1>About</h1>
+          <h1>About me</h1>
 
           <p>My name is Michael Genesini. I&apos;m Italian and as per the stereotype I love pizza. Well, maybe a little bit more than the average considering I got it tattooed on my sleeve.</p>
 
