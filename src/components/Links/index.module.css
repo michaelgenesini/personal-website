@@ -1,0 +1,29 @@
+.links ul {
+  display: flex;
+  list-style: none;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.links ul li {
+  position: relative;
+  padding: 0 8px 16px;
+}
+
+.active:after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+  left: 50%;
+  transform: translateY(-50%);
+  bottom: 4px;
+}
+
+.links ul li a:hover {
+  text-decoration: underline;
+}
+

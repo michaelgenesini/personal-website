@@ -1,9 +1,13 @@
+.logo {
+  margin: 32px 0;
+}
+
 .logo svg path {
-  fill: dark;
+  fill: rgb(var(--foreground-rgb));
 }
 
 @media (prefers-color-scheme: dark) {
   .logo svg path {
-    fill: white;
+    fill: rgb(var(--background-rgb));
   }
 }
