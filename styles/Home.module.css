@@ -1,16 +1,19 @@
-.logo {
-  margin: 32px 0;
-
+.title {
+  font-size: 3em;
+  font-weight: 100;
 }
 
-.logo path {
-  fill: var(--foreground-rgb);
+.subtitle {
+  font-size: 1.5em;
+  font-weight: 100;
 }
 
 .section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .nav {
@@ -19,19 +22,12 @@
   margin: 48px 0;
 }
 
-.nav ul {
-  display: flex;
-  list-style: none;
-  flex-shrink: 1;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 16px;
-}
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
 
-.nav ul li {
-  padding: 0 8px 16px;
-}
-
-.nav ul li a {
-  text-decoration: underline;
+  .subtitle {
+    font-size: 1.2rem;
+  }
 }
