@@ -12,7 +12,7 @@ const Title = styled.h1`
   font-weight: 100;
   text-align: center;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     font-size: 2rem;
   }
 `
@@ -23,7 +23,7 @@ const Subtitle = styled.h2`
   font-weight: 100;
   text-align: center;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     font-size: 1.2rem;
   }
 `

@@ -12,17 +12,9 @@ export default function Contact() {
         <Meta />
       </Head>
       <PageContent>
-        <h1>How you can contact me</h1>
+        <h1>Hello, let&apos;s talk</h1>
 
-        <p>I would be incredibly happy if you wanted to contact me and talk about anything. Feel free to reach out to me through any of my main channels 🥰</p>
-
-        <p>
-          <ul>
-            <li><a href="https://linkedin.com/in/michaelgenesini">LinkedIn</a></li>
-            <li><a href="">GitHub</a></li>
-            <li><a href="">Resume</a></li>
-          </ul>
-        </p>
+        <p>I&apos;m quite active on <a href="https://linkedin.com/in/michaelgenesini" target="_blank" rel="noreferrer">LinkedIn</a>, if you want to reach out to me feel free to connect and send a message 🥰</p>
       </PageContent>
     </>
   )
