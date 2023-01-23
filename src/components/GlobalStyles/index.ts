@@ -1,13 +1,22 @@
-import { createGlobalStyle } from "styled-components"
-import { Fira_Sans, Lora } from "@next/font/google"
+import { createGlobalStyle } from "styled-components";
+import { Fira_Sans, Lora } from "@next/font/google";
 
-export const fontSans = Fira_Sans({ weight: "600", subsets: ["latin"] })
-export const fontSerif = Lora({ subsets: ["latin"] })
+export const fontSans = Fira_Sans({ weight: "600", subsets: ["latin"] });
+export const fontSerif = Lora({ subsets: ["latin"] });
 
 export const GlobalStyles = createGlobalStyle`
   :root {
     --foreground-rgb: 0, 0, 0;
+    --anchor-rgb: 173, 106, 96;
     --background-rgb: 255, 255, 255;
+
+    /* Palette from profile picture */
+    --grullo: 161, 150, 140;
+    --umber: 115, 98, 92;
+    --timberwolf: 228, 221, 214;
+    --redwood: 207, 141, 128;
+    --linen: 236, 226, 217;
+    --light-gray: 213, 212, 210;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -39,7 +48,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    color: inherit;
+    color: rgb(var(--redwood));
+    text-decoration: none;
+  }
+
+  a:hover {
     text-decoration: underline;
   }
 
@@ -72,4 +85,4 @@ export const GlobalStyles = createGlobalStyle`
       color-scheme: dark;
     }
   }
-`
+`;
