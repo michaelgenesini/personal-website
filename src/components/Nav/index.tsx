@@ -1,17 +1,6 @@
-
+import { navs } from "@/constants/navs";
 
 export default function Nav() {
-  const links = [
-    ["[About]", "/about"],
-    ["[Contact]", "/contact"],
-    ["[Writing]", "/writing"],
-    ["[Reading]", "/reading"],
-    ["[Working with me]", "/working-with-me"],
-    ["[Stack]", "/stack"],
-    ["[Now]", "/now"],
-  ];
-
-
   return (
     <nav className="flex flex-col items-center justify-center p-8 text-center">
       <a href="/" aria-label="Home" className="mb-4">
@@ -29,9 +18,8 @@ export default function Nav() {
         </svg>
       </a>
 
-
       <ul className="flex flex-wrap items-center justify-center gap-6 text-sm sm:text-base font-[GeistMono]">
-        {links.map(([label, href]) => (
+        {navs.map(([label, href]) => (
           <li key={label}>
             <a
               href={href}
@@ -43,7 +31,7 @@ export default function Nav() {
         ))}
       </ul>
 
-        <div className="mt-10 w-full border-t border-dashed border-neutral-300 dark:border-neutral-700"></div>
+      <div className="mt-10 w-full border-t border-dashed border-neutral-300 dark:border-neutral-700"></div>
     </nav>
   );
 }
