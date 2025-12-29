@@ -4,6 +4,7 @@ import path from "path"
 import { Post } from "@/types/post"
 
 export const getPost = ({ slug }: { slug: string }) => {
+  console.log(slug)
   const filePath = path.join(process.cwd(), "content/writings", `${slug}.md`)
   if (!fs.existsSync(filePath)) return null
 

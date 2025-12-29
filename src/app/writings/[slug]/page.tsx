@@ -5,10 +5,11 @@ import { getPost } from "@/utils/getPost"
 import { Mdx } from "@/components/Mdx"
 
 export async function generateMetadata({
-  params: { slug },
+  params,
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
+  const { slug } = await params
   const post = await getPost({ slug })
 
   if (!post) return {}
@@ -41,7 +42,7 @@ export default async function WritingPage({
 }: {
   params: { slug: string }
 }) {
-  const { slug } = params
+  const { slug } = await params
   const post = getPost({ slug })
 
   if (!post) return notFound()
