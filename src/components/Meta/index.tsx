@@ -7,11 +7,11 @@ type Props = {
 const canonical = "https://michaelgenesini.com/"
 
 export const Meta = ({
-  title = 'Michael Genesini | Engineering Manager',
-  description = 'Personal website of Michael Genesini',
-  image = '',
+  title = "Michael Genesini | Engineering Manager & Tinkerer",
+  description = "Personal writing for clear thinking—mostly reflections and ideas, with occasional notes on engineering management.",
+  image = "",
 }: Props) => {
-  const url = typeof window !== 'undefined' ? window.location.href : canonical
+  const url = typeof window !== "undefined" ? window.location.href : canonical
 
   return (
     <>
@@ -36,9 +36,23 @@ export const Meta = ({
       <meta property="og:image:height" content="3500" />
 
       <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
       <link rel="manifest" href="/site.webmanifest" />
     </>
   )
