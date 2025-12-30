@@ -60,12 +60,12 @@ export default async function WritingPage({
 
       <section className="max-w-3xl mx-auto px-4 md:px-0">
         <article className="prose prose-neutral dark:prose-invert">
-          <h1 className="text-3xl font-serif tracking-tight mb-6">
+          <h1 className="text-3xl font-serif tracking-tight mb-2">
             {data.title}
           </h1>
-          <div className="prose prose-neutral dark:prose-invert max-w-none prose-p:leading-relaxed font-[Lora] leading-7">
+          <div className="prose dark:prose-invert max-w-none font-[Lora]">
             {data.date && (
-              <p className="text-sm text-neutral-500 mb-4">
+              <p className="text-neutral-500 mb-4">
                 :: {formattedDate}
                 {data.tags && data.tags.length > 0 && (
                   <> — {data.tags.join(", ")}</>

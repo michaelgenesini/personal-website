@@ -4,6 +4,7 @@ description: "Why the things that never trend often matter the most."
 date: "2025-09-02"
 tags: ["craft", "engineering", "simplicity"]
 cover: ""
+hidden: true
 ---
 
 There’s something suspicious about every “next big thing.”
