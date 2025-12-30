@@ -3,7 +3,7 @@ title: "Living 2 minutes earlier"
 description: "Set your watch a bit late, so you can live a bit earlier."
 cover: ""
 date: "2025-12-30"
-tags: ["life"]
+tags: ["life", "simplicity"]
 ---
 
 A couple of years ago I decided to buy a Casio. Not for a fancy trend. I just wanted to avoid using my phone to check the time. I noticed I was relying on my phone even for such a stupid thing like checking the time. I was always carrying my phone with me. All the time. That's just crazy. So, I bought a Casio, the [AE-1200WH](https://www.casio.com/us/watches/casio/product.AE-1200WH-1AV/) which has 5 alarms and a cool design with the world map with time zones.
