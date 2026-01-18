@@ -3,35 +3,18 @@ title: "About me"
 cover: "/profile.jpg"
 ---
 
-My name is Michael Genesini. I'm Italian and as per the
-stereotype I love pizza. Well, maybe a little bit more than the
-average considering I got it tattooed on my sleeve.
+I'm Michael, a tinkerer at heart. I'm curious about understanding how things work and obsessed with fixing them—in code, in teams, in everyday life.
 
-I'm definitely an introvert (INFP-A) and I struggle to get to
-know new people because of it, but I really love to get
-meaningful mental connections with other human beings.
+I'm Italian, based in Milan with my wife. We're slow digital nomads—we spend 3-6 months at a time in different places, at least once a year. We have a van I customized into an RV for roadtrips around Italy and Europe. I speak English and Spanish fluently, learning Portuguese.
 
-I've been working professionally in the software industry since
-2015, overlapping for some months with my master's degree in
-computer science engineering. In 2021 I started my journey as
-Engineering Manager which I fell in love with.
+I'm an introvert. I value meaningful conversations over small talk. I care about kindness and moving at a calm pace—but I move when it matters.
 
-When I'm not working, I do outdoor activities. Mainly walking
-and hiking on the marvelous Orobic mountains, but also
-bouldering and slacklining. I tend to try a lot of different
-hobbies because I get quickly excited about new things. To name
-a few: playing board games with friends, learning Arabic and
-Portuguese, learning Go (Weiqi), playing Djembè, tending a
-terrarium.
+I care deeply about environmentalism and sustainability. I'm vegetarian—mainly for environmental reasons, but also animal rights.
 
-I'm a super slow reader and I have a hard time keeping
-consistency on my reading pace. I'm trying now to schedule
-specific moments of my day for that, and I avoid having hard
-goals for "number of books" to relieve the stress of being so
-slow.
+Outside work, I'm rebuilding my reading habit and trying to build a writing one. Boxing three times a week keeps me grounded and active. I play percussion when the mood strikes.
 
-I also struggle with keeping a personal knowledge base for the
-things I read. I would really love keeping a Zettelkasten but I
-haven't found a good workflow yet.
+Professionally, I've been in software since 2015, starting as a frontend developer. Now I'm an Engineering Manager at [Cabify](https://cabify.com), leading the B2B mobility and ads teams. My technical background keeps me hands-on, which is how I like to work—helping teams succeed by fixing what's broken.
 
-I meditate every day 🧘
+I have a creative side—I care about aesthetics and design—which shapes how I think about products, even though I was never formally trained.
+
+I (try to) meditate everyday 🧘‍♂️

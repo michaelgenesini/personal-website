@@ -49,6 +49,9 @@ const mdxComponents = {
   hr: (props: React.HTMLAttributes<HTMLHRElement>) => (
     <hr className="border-neutral-500 my-8 sm:my-10" {...props} />
   ),
+  a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+    <a className="underline" {...props} />
+  ),
 }
 
 export const Mdx = ({ content }: { content: string }) => (

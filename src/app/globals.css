@@ -2,10 +2,11 @@
 
 @theme {
   --color-black: #100F0F;
+  --color-white: #FFFCF1;
 }
 
 :root {
-  --background: #ffffff;
+  --background: #FFFCF1;
   --foreground: #100F0F;
 }
 
