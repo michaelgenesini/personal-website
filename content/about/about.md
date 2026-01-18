@@ -11,7 +11,7 @@ I'm an introvert. I value meaningful conversations over small talk. I care about
 
 I care deeply about environmentalism and sustainability. I'm vegetarian—mainly for environmental reasons, but also animal rights.
 
-Outside work, I'm rebuilding my reading habit and trying to build a writing one. Boxing three times a week keeps me grounded and active. I play percussion when the mood strikes.
+Outside work, I'm rebuilding my reading habit and trying to build a writing one. Boxing three times a week keeps me grounded and active. I play percussion when the mood strikes. A few times a week I try to prepare proper dishes—cooking is both a creative outlet and meditation for me.
 
 Professionally, I've been in software since 2015, starting as a frontend developer. Now I'm an Engineering Manager at [Cabify](https://cabify.com), leading the B2B mobility and ads teams. My technical background keeps me hands-on, which is how I like to work—helping teams succeed by fixing what's broken.
 

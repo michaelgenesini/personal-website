@@ -31,9 +31,12 @@ export default function WritingsPage() {
       <Nav />
 
       <section className="max-w-3xl mx-auto px-4 md:px-0">
-        <h1 className="text-3xl font-serif tracking-tight mb-6 font-[Lora]">
+        <h1 className="text-3xl font-serif tracking-tight mb-2 font-[Lora]">
           Writings
         </h1>
+        <p className="text-neutral-600 dark:text-neutral-400 mb-6">
+          Learnings, thoughts, and reflections I write to stay present and find clarity.
+        </p>
         <ul className="space-y-6">
           {posts.map((post) => {
             const formattedDate = new Date(post.date)
