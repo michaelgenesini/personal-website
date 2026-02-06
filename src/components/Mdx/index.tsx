@@ -1,6 +1,33 @@
 import { MDXRemote } from "next-mdx-remote/rsc"
 
+type ImgProps = React.ImgHTMLAttributes<HTMLImageElement>
+
 const mdxComponents = {
+  img: ({ src, alt, title, ...props }: ImgProps) => {
+    let style: React.CSSProperties = {}
+
+    if (title) {
+      const trimmed = title.trim()
+      if (trimmed.endsWith("%")) {
+        style.width = trimmed
+      } else if (trimmed.endsWith("px")) {
+        style.width = trimmed
+      } else if (/^\d+$/.test(trimmed)) {
+        style.width = `${trimmed}px`
+      }
+    }
+
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={src}
+        alt={alt || ""}
+        style={style}
+        className="my-6 rounded-md border border-black dark:border-white mx-auto block"
+        {...props}
+      />
+    )
+  },
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className="font-[Lora] text-3xl sm:text-4xl md:text-5xl mb-6 tracking-tight"
