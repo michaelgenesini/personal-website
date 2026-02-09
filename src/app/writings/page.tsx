@@ -36,7 +36,8 @@ export default function WritingsPage() {
           Writings
         </h1>
         <p className="text-[#6b5e4f] dark:text-neutral-400 mb-8">
-          Learnings, thoughts, and reflections I write to stay present and find clarity.
+          Learnings, thoughts, and reflections I write to stay present and find
+          clarity.
         </p>
         <ul className="space-y-8">
           {posts.map((post, index) => {
