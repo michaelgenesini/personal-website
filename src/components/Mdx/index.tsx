@@ -30,19 +30,19 @@ const mdxComponents = {
   },
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
-      className="font-[Lora] text-3xl sm:text-4xl md:text-5xl mb-6 tracking-tight"
+      className="font-[Lora] text-3xl sm:text-4xl md:text-5xl mb-8 tracking-[-0.02em] leading-[1.15] font-medium"
       {...props}
     />
   ),
   h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2 className="font-[Lora] text-2xl sm:text-3xl mt-10 mb-4" {...props} />
+    <h2 className="font-[Lora] text-2xl sm:text-3xl mt-12 mb-5 tracking-[-0.02em] leading-[1.15] font-medium" {...props} />
   ),
   h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h3 className="font-[Lora] text-xl sm:text-2xl mt-8 mb-3" {...props} />
+    <h3 className="font-[Lora] text-xl sm:text-2xl mt-10 mb-4 tracking-[-0.02em] leading-[1.15] font-medium" {...props} />
   ),
   p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className="leading-relaxed font-[Lora] text-[15px] sm:text-base mb-4"
+      className="leading-[1.65] font-[Lora] text-[15px] text-[#6b5e4f] dark:text-neutral-300 mb-5"
       {...props}
     />
   ),
@@ -53,7 +53,7 @@ const mdxComponents = {
     <ol className="list-decimal pl-5 space-y-2 mb-4" {...props} />
   ),
   li: (props: React.HTMLAttributes<HTMLLIElement>) => (
-    <li className="leading-relaxed" {...props} />
+    <li className="leading-[1.65] text-[15px] text-[#6b5e4f] dark:text-neutral-300" {...props} />
   ),
   code: (props: React.HTMLAttributes<HTMLElement>) => (
     <code
@@ -69,15 +69,15 @@ const mdxComponents = {
   ),
   blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
-      className="border-l border-dashed border-neutral-400 pl-4 italic text-neutral-600 dark:text-neutral-300 my-6"
+      className="border-l border-dashed border-[#e5ddd0] dark:border-neutral-700 pl-4 italic text-[#6b5e4f] dark:text-neutral-300 my-8"
       {...props}
     />
   ),
   hr: (props: React.HTMLAttributes<HTMLHRElement>) => (
-    <hr className="border-neutral-500 my-8 sm:my-10" {...props} />
+    <hr className="border-[#e5ddd0] dark:border-neutral-700 my-10 sm:my-12" {...props} />
   ),
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-    <a className="underline" {...props} />
+    <a className="text-[#0c7b5f] no-underline border-b border-transparent hover:border-[#0c7b5f] transition-colors" {...props} />
   ),
 }
 

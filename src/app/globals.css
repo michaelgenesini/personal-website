@@ -3,11 +3,22 @@
 @theme {
   --color-black: #100F0F;
   --color-white: #FFFCF1;
+  --color-neutral-50: #faf8f5;
+  --color-neutral-100: #f0ebe3;
+  --color-neutral-200: #ddd4c6;
+  --color-neutral-300: #c5b8a5;
+  --color-neutral-400: #a69580;
+  --color-neutral-500: #87745c;
+  --color-neutral-600: #6b5b43;
+  --color-neutral-700: #52452f;
+  --color-neutral-800: #3c3220;
+  --color-neutral-900: #2c2416;
+  --color-neutral-950: #1a150c;
 }
 
 :root {
   --background: #FFFCF1;
-  --foreground: #100F0F;
+  --foreground: #2c2416;
 }
 
 @theme inline {
@@ -28,17 +39,17 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Geist', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
 }
 
 .font-\[Lora\] {
-  font-family: 'Lora', serif;
+  font-family: var(--font-lora), serif;
 }
 
 .font-\[Geist\] {
-  font-family: 'Geist', sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 .font-\[GeistMono\] {
-  font-family: 'GeistMono', monospace;
+  font-family: var(--font-geist-mono), monospace;
 }

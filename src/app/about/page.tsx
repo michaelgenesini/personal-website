@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Nav from "@/components/Nav"
+import Footer from "@/components/Footer"
 import { getAbout } from "@/utils/getAbout"
 import { notFound } from "next/navigation"
 import { Mdx } from "@/components/Mdx"
@@ -24,10 +25,10 @@ export default async function AboutPage() {
         <section className="max-w-3xl mx-auto px-4 md:px-0">
           <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12 items-start">
             <div className="md:col-span-3">
-              <h1 className="text-3xl tracking-tight mb-6 font-[Lora]">
+              <h1 className="text-3xl font-medium tracking-[-0.02em] leading-[1.15] mb-8 font-[Lora]">
                 {data.title}
               </h1>
-              <div className="prose prose-neutral dark:prose-invert max-w-none prose-p:leading-relaxed font-[Lora] leading-7">
+              <div className="max-w-none font-[Lora]">
                 <Mdx content={content} />
               </div>
             </div>
@@ -45,7 +46,7 @@ export default async function AboutPage() {
           </div>
         </section>
 
-        <div className="my-10 w-full border-t border-dashed border-neutral-300 dark:border-neutral-700"></div>
+        <Footer />
       </main>
     </>
   )

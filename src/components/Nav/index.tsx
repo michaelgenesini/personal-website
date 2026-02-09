@@ -1,10 +1,10 @@
-import { navs } from "@/constants/navs"
-import Link from "next/link"
+import { navs } from "@/constants/navs";
+import Link from "next/link";
 
 export default function Nav() {
   return (
     <>
-      <nav className="flex flex-col md:flex-row text-center max-w-3xl mx-auto py-4 md:py-8 px-4 md:px-0 space-y-4 md:space-y-0">
+      <nav className="flex flex-col md:flex-row text-center max-w-3xl mx-auto py-6 md:py-10 px-4 md:px-0 space-y-4 md:space-y-0">
         <Link
           href="/"
           aria-label="Home"
@@ -31,7 +31,7 @@ export default function Nav() {
             <li key={label}>
               <a
                 href={href}
-                className="relative font-medium text-black hover:text-black dark:text-white dark:hover:text-white after:content-[''] after:absolute after:left-1/2 after:-bottom-1 after:-translate-x-1/2 after:h-[2px] after:w-1 after:bg-black after:opacity-0 hover:after:opacity-100 dark:after:bg-white transition"
+                className="text-[#6b5e4f] dark:text-neutral-300 border-b border-transparent hover:border-[#0c7b5f] hover:text-[#0c7b5f] transition-colors"
               >
                 {label}
               </a>
@@ -39,7 +39,7 @@ export default function Nav() {
           ))}
         </ul>
       </nav>
-      <div className="mb-8 w-full border-t border-dashed border-neutral-300 dark:border-neutral-700"></div>
+      <div className="mb-10 w-full border-t border-dashed border-[#e5ddd0] dark:border-neutral-700"></div>
     </>
-  )
+  );
 }

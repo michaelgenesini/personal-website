@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export default function WritingsPage() {
   const postsDir = path.join(process.cwd(), "content/writings");
@@ -31,23 +32,24 @@ export default function WritingsPage() {
       <Nav />
 
       <section className="max-w-3xl mx-auto px-4 md:px-0">
-        <h1 className="text-3xl font-serif tracking-tight mb-2 font-[Lora]">
+        <h1 className="text-3xl font-[Lora] font-medium tracking-[-0.02em] leading-[1.15] mb-4">
           Writings
         </h1>
-        <p className="text-neutral-600 dark:text-neutral-400 mb-6">
+        <p className="text-[#6b5e4f] dark:text-neutral-400 mb-8">
           Learnings, thoughts, and reflections I write to stay present and find clarity.
         </p>
-        <ul className="space-y-6">
-          {posts.map((post) => {
+        <ul className="space-y-8">
+          {posts.map((post, index) => {
             const formattedDate = new Date(post.date)
               .toISOString()
               .split("T")[0]
               .replace(/-/g, ".");
+            const isLast = index === posts.length - 1;
 
             return (
               <li
                 key={post.slug}
-                className="pb-6 border-b border-dashed border-neutral-300 dark:border-neutral-700"
+                className={`pb-8 ${isLast ? "" : "border-b border-dashed border-[#e5ddd0] dark:border-neutral-700"}`}
               >
                 <Link href={`/writings/${post.slug}`}>
                   <h2 className="text-lg font-[Lora] underline">
@@ -55,11 +57,11 @@ export default function WritingsPage() {
                   </h2>
                 </Link>
                 {post.description && (
-                  <p className="font-serif text-neutral-700 dark:text-neutral-300 mt-2">
+                  <p className="font-serif text-[#6b5e4f] dark:text-neutral-300 mt-2 text-[15px] leading-[1.65]">
                     {post.description}
                   </p>
                 )}
-                <p className="text-sm text-neutral-500 mt-2">
+                <p className="text-sm text-[#6b5e4f] dark:text-neutral-400 mt-2">
                   :: {formattedDate}
                   {post.tags && post.tags.length > 0 && (
                     <> — {post.tags.join(", ")}</>
@@ -70,6 +72,7 @@ export default function WritingsPage() {
           })}
         </ul>
       </section>
+      <Footer />
     </main>
   );
 }

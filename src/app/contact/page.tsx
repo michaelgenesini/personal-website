@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav"
+import Footer from "@/components/Footer"
 import Head from "next/head"
 import { Meta } from "@/components/Meta"
 
@@ -14,17 +15,17 @@ export default function AboutPage() {
         <section className="max-w-3xl mx-auto px-4 md:px-0">
           <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12 items-start">
             <div className="md:col-span-2">
-              <h1 className="text-3xl tracking-tight mb-6 font-[Lora]">
+              <h1 className="text-3xl font-medium tracking-[-0.02em] leading-[1.15] mb-8 font-[Lora]">
                 Contact
               </h1>
-              <p className="font-[Lora] text-neutral-700 dark:text-neutral-300 text-lg">
+              <p className="font-[Lora] text-[#6b5e4f] dark:text-neutral-300 text-[15px] leading-[1.65]">
                 I&apos;m not hiding — just keeping things simple. You can reach
                 me on{" "}
                 <a
                   href="https://www.linkedin.com/in/michaelgenesini"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4 hover:text-neutral-900 dark:hover:text-neutral-100"
+                  className="text-[#0c7b5f] no-underline border-b border-transparent hover:border-[#0c7b5f] transition-colors"
                 >
                   LinkedIn
                 </a>
@@ -42,7 +43,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <div className="my-10 w-full border-t border-dashed border-neutral-300 dark:border-neutral-700"></div>
+        <Footer />
       </main>
     </>
   )

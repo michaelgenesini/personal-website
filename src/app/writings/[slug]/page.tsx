@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation"
+import Link from "next/link"
 import Nav from "@/components/Nav"
+import Footer from "@/components/Footer"
 import { Metadata } from "next"
 import { getPost } from "@/utils/getPost"
 import { Mdx } from "@/components/Mdx"
@@ -59,13 +61,16 @@ export default async function WritingPage({
       <Nav />
 
       <section className="max-w-3xl mx-auto px-4 md:px-0">
-        <article className="prose prose-neutral dark:prose-invert">
-          <h1 className="text-3xl font-serif tracking-tight mb-2">
+        <Link href="/writings" className="text-sm font-semibold text-[#0c7b5f] border-b border-transparent hover:border-[#0c7b5f] transition-colors">
+          &larr; Back to writings
+        </Link>
+        <article className="mt-10">
+          <h1 className="text-3xl font-[Lora] font-medium tracking-[-0.02em] leading-[1.15] mb-4">
             {data.title}
           </h1>
-          <div className="prose dark:prose-invert max-w-none font-[Lora]">
+          <div className="max-w-none font-[Lora]">
             {data.date && (
-              <p className="text-neutral-500 mb-4">
+              <p className="text-[#6b5e4f] dark:text-neutral-400 mb-6 text-sm">
                 :: {formattedDate}
                 {data.tags && data.tags.length > 0 && (
                   <> — {data.tags.join(", ")}</>
@@ -75,8 +80,11 @@ export default async function WritingPage({
             <Mdx content={content} />
           </div>
         </article>
-        <div className="my-10 w-full border-t border-dashed border-neutral-300 dark:border-neutral-700"></div>
+        <Link href="/writings" className="inline-block mt-14 text-sm font-semibold text-[#0c7b5f] border-b border-transparent hover:border-[#0c7b5f] transition-colors">
+          &larr; Back to writings
+        </Link>
       </section>
+      <Footer />
     </main>
   )
 }
