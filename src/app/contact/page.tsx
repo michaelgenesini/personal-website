@@ -1,7 +1,7 @@
-import Nav from "@/components/Nav"
-import Footer from "@/components/Footer"
-import Head from "next/head"
-import { Meta } from "@/components/Meta"
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import { Meta } from "@/components/Meta";
 
 export default function AboutPage() {
   return (
@@ -9,7 +9,7 @@ export default function AboutPage() {
       <Head>
         <Meta />
       </Head>
-      <main className="min-h-screen bg-white text-neutral-900 dark:bg-black dark:text-white">
+      <main className="min-h-screen text-neutral-900 dark:text-neutral-100">
         <Nav />
 
         <section className="max-w-3xl mx-auto px-4 md:px-0">
@@ -18,7 +18,7 @@ export default function AboutPage() {
               <h1 className="text-3xl font-medium tracking-[-0.02em] leading-[1.15] mb-8 font-[Lora]">
                 Contact
               </h1>
-              <p className="font-[Lora] text-[#6b5e4f] dark:text-neutral-300 text-[15px] leading-[1.65]">
+              <p className="font-[Lora] text-[#6b5e4f] dark:text-neutral-400 text-[15px] leading-[1.65]">
                 I&apos;m not hiding — just keeping things simple. You can reach
                 me on{" "}
                 <a
@@ -37,7 +37,7 @@ export default function AboutPage() {
               <img
                 src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWJ3anRzcWExdDBrNnA4Y3BibG9qN3V1aWNqM3QyNHhndTF2YzFvbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/nCK0MutoTCJ9LnbEWj/giphy.gif"
                 alt="Michael Scott reaction call"
-                className="w-third h-auto rounded-md border border-black dark:border-white object-cover"
+                className="w-third h-auto rounded-md border border-black dark:border-neutral-700 object-cover"
               />
             </div>
           </div>
@@ -46,5 +46,5 @@ export default function AboutPage() {
         <Footer />
       </main>
     </>
-  )
+  );
 }

@@ -1,55 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  --color-black: #100F0F;
-  --color-white: #FFFCF1;
-  --color-neutral-50: #faf8f5;
-  --color-neutral-100: #f0ebe3;
-  --color-neutral-200: #ddd4c6;
-  --color-neutral-300: #c5b8a5;
-  --color-neutral-400: #a69580;
-  --color-neutral-500: #87745c;
-  --color-neutral-600: #6b5b43;
-  --color-neutral-700: #52452f;
-  --color-neutral-800: #3c3220;
-  --color-neutral-900: #2c2416;
-  --color-neutral-950: #1a150c;
+    --color-black: #1a150c;
+    --color-white: #fffcf1;
+    --color-neutral-50: #faf8f5;
+    --color-neutral-100: #f0ebe3;
+    --color-neutral-200: #ddd4c6;
+    --color-neutral-300: #c5b8a5;
+    --color-neutral-400: #a69580;
+    --color-neutral-500: #87745c;
+    --color-neutral-600: #6b5b43;
+    --color-neutral-700: #52452f;
+    --color-neutral-800: #3c3220;
+    --color-neutral-900: #2c2416;
+    --color-neutral-950: #1a150c;
 }
 
 :root {
-  --background: #FFFCF1;
-  --foreground: #2c2416;
+    --background: #fffcf1;
+    --foreground: #2c2416;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font: var(--font-lora);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font: var(--font-lora);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #100F0F;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #1a150c;
+        --foreground: #f0ebe3;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+    background: var(--background) url("/texture.jpg") repeat;
+    color: var(--foreground);
+    font-family:
+        var(--font-geist-sans),
+        system-ui,
+        -apple-system,
+        sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--background);
+    }
 }
 
 .font-\[Lora\] {
-  font-family: var(--font-lora), serif;
+    font-family: var(--font-lora), serif;
 }
 
 .font-\[Geist\] {
-  font-family: var(--font-geist-sans), sans-serif;
+    font-family: var(--font-geist-sans), sans-serif;
 }
 
 .font-\[GeistMono\] {
-  font-family: var(--font-geist-mono), monospace;
+    font-family: var(--font-geist-mono), monospace;
 }

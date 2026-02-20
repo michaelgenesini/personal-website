@@ -1,19 +1,19 @@
-import { MDXRemote } from "next-mdx-remote/rsc"
+import { MDXRemote } from "next-mdx-remote/rsc";
 
-type ImgProps = React.ImgHTMLAttributes<HTMLImageElement>
+type ImgProps = React.ImgHTMLAttributes<HTMLImageElement>;
 
 const mdxComponents = {
   img: ({ src, alt, title, ...props }: ImgProps) => {
-    let style: React.CSSProperties = {}
+    let style: React.CSSProperties = {};
 
     if (title) {
-      const trimmed = title.trim()
+      const trimmed = title.trim();
       if (trimmed.endsWith("%")) {
-        style.width = trimmed
+        style.width = trimmed;
       } else if (trimmed.endsWith("px")) {
-        style.width = trimmed
+        style.width = trimmed;
       } else if (/^\d+$/.test(trimmed)) {
-        style.width = `${trimmed}px`
+        style.width = `${trimmed}px`;
       }
     }
 
@@ -23,10 +23,10 @@ const mdxComponents = {
         src={src}
         alt={alt || ""}
         style={style}
-        className="my-6 rounded-md border border-black dark:border-white mx-auto block"
+        className="my-6 rounded-md border border-black dark:border-neutral-700 mx-auto block"
         {...props}
       />
-    )
+    );
   },
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
@@ -35,14 +35,20 @@ const mdxComponents = {
     />
   ),
   h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2 className="font-[Lora] text-2xl sm:text-3xl mt-12 mb-5 tracking-[-0.02em] leading-[1.15] font-medium" {...props} />
+    <h2
+      className="font-[Lora] text-2xl sm:text-3xl mt-12 mb-5 tracking-[-0.02em] leading-[1.15] font-medium"
+      {...props}
+    />
   ),
   h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h3 className="font-[Lora] text-xl sm:text-2xl mt-10 mb-4 tracking-[-0.02em] leading-[1.15] font-medium" {...props} />
+    <h3
+      className="font-[Lora] text-xl sm:text-2xl mt-10 mb-4 tracking-[-0.02em] leading-[1.15] font-medium"
+      {...props}
+    />
   ),
   p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className="leading-[1.65] font-[Lora] text-[15px] text-[#6b5e4f] dark:text-neutral-300 mb-5"
+      className="leading-[1.65] font-[Lora] text-[15px] text-[#6b5e4f] dark:text-neutral-400 mb-5"
       {...props}
     />
   ),
@@ -53,7 +59,10 @@ const mdxComponents = {
     <ol className="list-decimal pl-5 space-y-2 mb-4" {...props} />
   ),
   li: (props: React.HTMLAttributes<HTMLLIElement>) => (
-    <li className="leading-[1.65] text-[15px] text-[#6b5e4f] dark:text-neutral-300" {...props} />
+    <li
+      className="leading-[1.65] text-[15px] text-[#6b5e4f] dark:text-neutral-400"
+      {...props}
+    />
   ),
   code: (props: React.HTMLAttributes<HTMLElement>) => (
     <code
@@ -69,18 +78,24 @@ const mdxComponents = {
   ),
   blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
-      className="border-l border-dashed border-[#e5ddd0] dark:border-neutral-700 pl-4 italic text-[#6b5e4f] dark:text-neutral-300 my-8"
+      className="border-l border-dashed border-[#e5ddd0] dark:border-neutral-800 pl-4 italic text-[#6b5e4f] dark:text-neutral-400 my-8"
       {...props}
     />
   ),
   hr: (props: React.HTMLAttributes<HTMLHRElement>) => (
-    <hr className="border-[#e5ddd0] dark:border-neutral-700 my-10 sm:my-12" {...props} />
+    <hr
+      className="border-[#e5ddd0] dark:border-neutral-800 my-10 sm:my-12"
+      {...props}
+    />
   ),
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-    <a className="text-[#0c7b5f] no-underline border-b border-transparent hover:border-[#0c7b5f] transition-colors" {...props} />
+    <a
+      className="text-[#0c7b5f] no-underline border-b border-transparent hover:border-[#0c7b5f] transition-colors"
+      {...props}
+    />
   ),
-}
+};
 
 export const Mdx = ({ content }: { content: string }) => (
   <MDXRemote source={content} components={mdxComponents} />
-)
+);

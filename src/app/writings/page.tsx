@@ -28,14 +28,14 @@ export default function WritingsPage() {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <main className="min-h-screen bg-white text-neutral-900 dark:bg-black dark:text-white">
+    <main className="min-h-screen text-neutral-900 dark:text-neutral-100">
       <Nav />
 
       <section className="max-w-3xl mx-auto px-4 md:px-0">
         <h1 className="text-3xl font-[Lora] font-medium tracking-[-0.02em] leading-[1.15] mb-4">
           Writings
         </h1>
-        <p className="text-[#6b5e4f] dark:text-neutral-400 mb-8">
+        <p className="text-[#6b5e4f] dark:text-neutral-500 mb-8">
           Learnings, thoughts, and reflections I write to stay present and find
           clarity.
         </p>
@@ -50,7 +50,7 @@ export default function WritingsPage() {
             return (
               <li
                 key={post.slug}
-                className={`pb-8 ${isLast ? "" : "border-b border-dashed border-[#e5ddd0] dark:border-neutral-700"}`}
+                className={`pb-8 ${isLast ? "" : "border-b border-dashed border-[#e5ddd0] dark:border-neutral-800"}`}
               >
                 <Link href={`/writings/${post.slug}`}>
                   <h2 className="text-lg font-[Lora] underline">
@@ -58,11 +58,11 @@ export default function WritingsPage() {
                   </h2>
                 </Link>
                 {post.description && (
-                  <p className="font-serif text-[#6b5e4f] dark:text-neutral-300 mt-2 text-[15px] leading-[1.65]">
+                  <p className="font-serif text-[#6b5e4f] dark:text-neutral-400 mt-2 text-[15px] leading-[1.65]">
                     {post.description}
                   </p>
                 )}
-                <p className="text-sm text-[#6b5e4f] dark:text-neutral-400 mt-2">
+                <p className="text-sm text-[#6b5e4f] dark:text-neutral-500 mt-2">
                   :: {formattedDate}
                   {post.tags && post.tags.length > 0 && (
                     <> — {post.tags.join(", ")}</>

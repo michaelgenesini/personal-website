@@ -14,7 +14,7 @@ export default function Nav() {
             width="56"
             height="41"
             viewBox="0 0 56 41"
-            className="h-10 w-10 opacity-90 text-blank dark:text-white"
+            className="h-10 w-10 opacity-90 text-blank dark:text-neutral-100"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -31,7 +31,7 @@ export default function Nav() {
             <li key={label}>
               <a
                 href={href}
-                className="text-[#6b5e4f] dark:text-neutral-300 border-b border-transparent hover:border-[#0c7b5f] hover:text-[#0c7b5f] transition-colors"
+                className="text-[#6b5e4f] dark:text-neutral-400 border-b border-transparent hover:border-[#0c7b5f] hover:text-[#0c7b5f] transition-colors"
               >
                 {label}
               </a>
@@ -39,7 +39,7 @@ export default function Nav() {
           ))}
         </ul>
       </nav>
-      <div className="mb-10 w-full border-t border-dashed border-[#e5ddd0] dark:border-neutral-700"></div>
+      <div className="mb-10 w-full border-t border-dashed border-[#e5ddd0] dark:border-neutral-800"></div>
     </>
   );
 }

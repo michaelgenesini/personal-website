@@ -9,9 +9,9 @@ export default function HomePage() {
       <Head>
         <Meta />
       </Head>
-      <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
+      <main className="min-h-screen text-black dark:text-neutral-100">
         <section className="flex flex-col items-center justify-center min-h-screen text-center px-6">
-          <div className="h-10 w-10 mb-6 text-black dark:text-white">
+          <div className="h-10 w-10 mb-6 text-black dark:text-neutral-100">
             <Logo />
           </div>
 
@@ -19,11 +19,11 @@ export default function HomePage() {
             <h1 className="text-4xl sm:text-5xl font-[Lora] tracking-tight">
               Michael Genesini
             </h1>
-            <div className="mt-2 w-full border-t border-dashed border-[#e5ddd0] dark:border-neutral-700"></div>
-            <p className="mt-2 text-lg sm:text-xl text-[#6b5e4f] dark:text-white font-[GeistMono] tracking-[.25em]">
+            <div className="mt-2 w-full border-t border-dashed border-[#e5ddd0] dark:border-neutral-800"></div>
+            <p className="mt-2 text-lg sm:text-xl text-[#6b5e4f] dark:text-neutral-400 font-[GeistMono] tracking-[.25em]">
               Engineering Manager & Tinkerer
             </p>
-            <div className="mt-2 w-full border-t border-dashed border-[#e5ddd0] dark:border-neutral-700"></div>
+            <div className="mt-2 w-full border-t border-dashed border-[#e5ddd0] dark:border-neutral-800"></div>
           </div>
 
           <nav className="mt-8">
@@ -32,7 +32,7 @@ export default function HomePage() {
                 <li key={label}>
                   <a
                     href={href}
-                    className="text-[#6b5e4f] dark:text-neutral-300 border-b border-transparent hover:border-[#0c7b5f] hover:text-[#0c7b5f] transition-colors"
+                    className="text-[#6b5e4f] dark:text-neutral-400 border-b border-transparent hover:border-[#0c7b5f] hover:text-[#0c7b5f] transition-colors"
                   >
                     {label}
                   </a>
